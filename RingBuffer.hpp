@@ -1,3 +1,6 @@
+#ifndef __RINGBUFFER_H__
+#define __RINGBUFFER_H__
+
 #include "Nocopyable.hpp"
 
 template <typename T, int N>
@@ -128,3 +131,5 @@ template <typename T, int N>
 inline T RingBuffer<T, N>::operator[](int i) const {
   return *(buffer_ + ((tail_ + i) & buffer_size_1_));
 }
+
+#endif // __RINGBUFFER_H__

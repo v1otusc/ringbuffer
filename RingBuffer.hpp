@@ -7,7 +7,7 @@ template <typename T, int N>
 class RingBuffer : public Nocopyable {
  public:
   RingBuffer();
-  ~RingBuffer() override;
+  virtual ~RingBuffer();
 
   inline void push_back(const T& data);
   inline void pop_front();
